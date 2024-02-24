@@ -20,8 +20,14 @@ public class ObjectDuplicator : EditorWindow
         GUILayout.Label("Let's Duplicate!", EditorStyles.boldLabel);
 
         //コピー元オブジェクト、コピー数、オフセットをフィールドで受け取る
-        originalObject = EditorGUILayout.ObjectField("Original Object", originalObject, typeof(GameObject), true) as GameObject;
+        originalObject = EditorGUILayout.ObjectField("Original Object", 
+            originalObject, 
+            typeof(GameObject), 
+            true) 
+            as GameObject;
+
         numberOfCopies = EditorGUILayout.IntField("Number of copies", numberOfCopies);
+        
         offset = EditorGUILayout.Vector3Field("offset", offset);
 
         //ボタンを押したら複製
